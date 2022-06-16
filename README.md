@@ -1,52 +1,63 @@
 # Typescript Clean Architecture 🚀
 
-> Arquitetura limpa com Typescript
+> Arquitetura limpa com Typescript e NestJs
 
 > Projeto criado durante o esquenta da Imersão FullCycle 8
 
 ## 👨‍💻 Tecnologias e bibliotecas utilizadas 👩‍💻
 
-- Javascript / Typescript : Linguagem programação
+- Typescript : Linguagem programação
 - NodeJs : JavaScript runtime
-- Express : Framework web minimalista para NodeJs
-- Jest : Framework para testes unitários
-- Arquitetura: Clean Architecture;
+- NestJs : Framework web para NodeJs
+- Arquitetura: Clean Architecture
+- TypeORM : Framework ORM
 
 ### 📚 bibliotecas adicionais 🗃️
 
 ## 📖 Guia 📃
 
-- Iniciando um projeto Node Js
+- Instalando o Nest Js
 
-        npm init -y
+        npm install -g @nestjs/cli
 
-- Adicionando Typescript ao projeto
+- Iniciando um projeto Nest
 
-        npm i typescript @types/node -D
-        npx tsc --init
+        nest new nome-do-projeto
+        select npm
 
-- Adicionando Jest para testes
+- Criando o recurso routes
 
-        npm i jest -D
-        npx jest --init
-        npm i ts-node -D
-        npm i @swc/jest @swc/core @types/jest -D
+        nest g resource routes
+        transport layer select REST API
+        generate CRUD entry points select Yes
 
-        no jest.config.ts substituir:
-          transform: {
-            '^.+\\.(t|j)sx?$': ['@swc/jest'],
-          },
+- Para escolha do ORM:
 
-- Adicionando o Express
+  1. ORM tipo: Active Record - Registro ativo
 
-        npm i express
-        npm i @types/express -D
+     Modelo estende de alguma classe, ex: class RouteModel extends Model {}
 
-        no package.json:
-          "scripts": {
-            ...
-            "express": "ts-node src/infra/http/express/index.ts"
-          },
+     Deve-se modelar duas classes para cada entidade para manter separada as regras de negócio do framework.
+
+     Exemplos: Sequelize, Prisma, Eloquent, Django ORM
+
+  2. ORM tipo: Data Mapper - Mapeador de dados
+
+     Diferente dos active record os modelos não estendem de nada e pode-se usar diretamente nossas entidades ricas de negócio só configurando o mapeamento.
+
+     Exemplos: MikroORM, Doctrine, JPA ou Hibernate, TypeORM(obs: "híbrido" tem os dois)
+
+- Instalando o TypeORM:
+
+        npm install typeorm
+
+- Instalando o driver do banco sqlite:
+
+        npm install sqlite3
+
+- Instalando a integração NestJs com TypeORM:
+
+        npm install @nestjs/typeorm
 
 ## 🔗 Links úteis ✨
 
