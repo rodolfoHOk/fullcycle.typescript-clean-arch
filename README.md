@@ -59,6 +59,14 @@
 
         npm install @nestjs/typeorm
 
+- Instalando web socket no NestJs
+
+        npm install @nestjs/websockets @nestjs/platform-socket.io
+
+- Gerando o web socket no projeto Nest
+
+        nest g gateway routes/routes
+
 ## 🔗 Links úteis ✨
 
 ## 🔥 Repositórios da Imersão FullCycle 8 ✨

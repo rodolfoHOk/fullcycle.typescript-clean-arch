@@ -10,6 +10,7 @@ import { ListAllRoutesUseCase } from '../@core/application/list-all-routes.use-c
 import { RouteSchema } from '../@core/infra/db/typeorm/route.schema';
 import { RouteTypeOrmRepository } from '../@core/infra/db/typeorm/route-typeorm.repository';
 import { Route } from '../@core/domain/route.entity';
+import { RoutesGateway } from './routes.gateway';
 
 @Module({
   imports: [TypeOrmModule.forFeature([RouteSchema])],
@@ -41,6 +42,7 @@ import { Route } from '../@core/domain/route.entity';
       },
       inject: [RouteTypeOrmRepository],
     },
+    RoutesGateway,
   ],
 })
 export class RoutesModule {}
