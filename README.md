@@ -11,8 +11,8 @@
 - NestJs : Framework web para NodeJs
 - Arquitetura: Clean Architecture
 - TypeORM : Framework ORM
-
-### 📚 bibliotecas adicionais 🗃️
+- WebSockets: Comunicação bidirecional realtime
+- sqLite : Banco de dados
 
 ## 📖 Guia 📃
 
@@ -67,10 +67,10 @@
 
         nest g gateway routes/routes
 
-## 🔗 Links úteis ✨
-
 ## 🔥 Repositórios da Imersão FullCycle 8 ✨
 
 - [Arquitetura Limpa com Typescript](https://github.com/rodolfoHOk/fullcycle.typescrit-clean-arch)
 
 - [React Maps](https://github.com/rodolfoHOk/fullcycle.react-maps)
+
+- [Go Iniciando do Zero](https://github.com/rodolfoHOk/fullcycle.go-init-from-zero)
